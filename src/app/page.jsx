@@ -1,3 +1,5 @@
+"use client";  // This must be the first line
+
 import { useState } from 'react';
 
 function MainComponent() {
