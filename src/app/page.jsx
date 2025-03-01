@@ -1,4 +1,4 @@
-"use client";  // This must be the first line
+"use client";
 
 import { useState } from 'react';
 
@@ -6,12 +6,13 @@ function MainComponent() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#f5f1e3] font-serif">
-      <nav className="bg-[#8B4513] p-4 shadow-lg">
+    <div className="min-h-screen bg-gradient-to-b from-yellow-100 to-amber-100 font-serif">
+      {/* Navigation Bar */}
+      <nav className="bg-amber-700 p-4 shadow-md">
         <div className="container mx-auto flex justify-between items-center">
-          <div className="text-white text-3xl font-bold">
+          <a href="#home" className="text-white text-3xl font-bold">
             🏡 Sunnyside Country Store
-          </div>
+          </a>
           <div className="hidden md:flex space-x-6 text-white text-lg">
             <a href="#home" className="hover:text-yellow-300">Home</a>
             <a href="#fuel" className="hover:text-yellow-300">Fuel Prices</a>
@@ -34,51 +35,90 @@ function MainComponent() {
         )}
       </nav>
 
-      <main>
-        <section id="home" className="relative h-[500px]">
-          <img src="/country-store.jpg" alt="Country Store" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="text-center text-white">
-              <h1 className="text-5xl font-bold">Welcome to Sunnyside Country Store</h1>
-              <p className="text-2xl mt-2">Your local stop for fresh goods & fuel</p>
+      {/* Hero Section */}
+      <section id="home" className="relative h-[600px] flex items-center justify-center">
+        <img src="/country-store-hero.jpg" alt="Sunnyside Country Store" className="absolute inset-0 w-full h-full object-cover brightness-50" />
+        <div className="text-center text-white z-10">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4">Welcome to Sunnyside</h1>
+          <p className="text-xl md:text-2xl mb-8">Your Community Hub for Essentials & More</p>
+          <a href="#store" className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-full text-lg">
+            Explore Our Store
+          </a>
+        </div>
+      </section>
+
+      {/* Fuel Prices Section */}
+      <section id="fuel" className="py-16 bg-white">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-8">Today's Fuel Prices</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-amber-50 p-8 rounded-xl shadow-md">
+              <h3 className="text-2xl font-semibold mb-2">Regular</h3>
+              <p className="text-4xl text-amber-700">$3.29</p>
+            </div>
+            <div className="bg-amber-50 p-8 rounded-xl shadow-md">
+              <h3 className="text-2xl font-semibold mb-2">Plus</h3>
+              <p className="text-4xl text-amber-700">$3.49</p>
+            </div>
+            <div className="bg-amber-50 p-8 rounded-xl shadow-md">
+              <h3 className="text-2xl font-semibold mb-2">Premium</h3>
+              <p className="text-4xl text-amber-700">$3.69</p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="fuel" className="py-12 bg-gray-100">
-          <div className="container mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Today's Fuel Prices</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl">Regular</h3>
-                <p className="text-3xl text-[#8B4513]">$3.29</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl">Plus</h3>
-                <p className="text-3xl text-[#8B4513]">$3.49</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl">Premium</h3>
-                <p className="text-3xl text-[#8B4513]">$3.69</p>
-              </div>
+      {/* Store Section */}
+      <section id="store" className="py-16 bg-yellow-50">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-8">Our Store Highlights</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <img src="/fresh-produce.jpg" alt="Fresh Produce" className="w-full h-48 object-cover rounded-md mb-4" />
+              <h3 className="text-2xl font-semibold mb-2">Fresh Produce</h3>
+              <p className="text-gray-600">Locally sourced fruits and vegetables.</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <img src="/bakery-items.jpg" alt="Bakery Items" className="w-full h-48 object-cover rounded-md mb-4" />
+              <h3 className="text-2xl font-semibold mb-2">Bakery Delights</h3>
+              <p className="text-gray-600">Freshly baked goods daily.</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <img src="/grocery-items.jpg" alt="Grocery Items" className="w-full h-48 object-cover rounded-md mb-4" />
+              <h3 className="text-2xl font-semibold mb-2">Grocery Essentials</h3>
+              <p className="text-gray-600">All your daily needs in one place.</p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="order" className="py-12 bg-white">
-          <div className="container mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Order Online</h2>
-            <form className="max-w-lg mx-auto bg-gray-100 p-6 rounded-lg shadow-md">
-              <input type="text" placeholder="Your Name" className="w-full p-2 mb-4 border rounded" />
-              <input type="text" placeholder="Your Contact" className="w-full p-2 mb-4 border rounded" />
-              <textarea placeholder="Your Order Details" className="w-full p-2 mb-4 border rounded"></textarea>
-              <button type="submit" className="bg-[#8B4513] text-white px-6 py-2 rounded">Submit Order</button>
-            </form>
-          </div>
-        </section>
-      </main>
+      {/* Order Online Section */}
+      <section id="order" className="py-16 bg-white">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-8">Place Your Order Online</h2>
+          <form className="max-w-lg mx-auto bg-yellow-50 p-8 rounded-xl shadow-md">
+            <input type="text" placeholder="Your Name" className="w-full p-3 mb-4 border rounded" />
+            <input type="text" placeholder="Your Contact" className="w-full p-3 mb-4 border rounded" />
+            <textarea placeholder="Order Details" className="w-full p-3 mb-4 border rounded"></textarea>
+            <button type="submit" className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-full">
+              Submit Order
+            </button>
+          </form>
+        </div>
+      </section>
 
-      <footer className="bg-[#8B4513] text-white py-6 text-center">
+      {/* Contact Section */}
+      <section id="contact" className="py-16 bg-yellow-100">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-8">Contact Us</h2>
+          <p className="text-lg text-gray-700 mb-4">Have any questions? Reach out to us!</p>
+          <p className="text-lg text-gray-700">Email: info@sunnysidecountrystore.com</p>
+          <p className="text-lg text-gray-700">Phone: (123) 456-7890</p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-amber-700 text-white py-8 text-center">
         <p>© 2025 Sunnyside Country Store. All rights reserved.</p>
       </footer>
     </div>
