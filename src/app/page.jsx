@@ -71,6 +71,19 @@ function MainComponent() {
           </div>
         )}
       </nav>
+      
+       {/* Hero Section */}
+       <section id="home" className="relative h-[600px] flex items-center justify-center">
+        <img src="/gasstation.png" alt="Sunnyside Country Store" className="absolute inset-0 w-full h-full object-cover brightness-50" />
+        <div className="text-center text-white z-10">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4">Welcome to Sunnyside Country Store</h1>
+          <p className="text-xl md:text-2xl mb-8">Your Community Hub for Essentials & More</p>
+          <a href="#store" className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-full text-lg">
+            Explore Our Store
+          </a>
+        </div>
+      </section>
+
 
       {/* Fuel Prices Section */}
       <section id="fuel" className="py-16 bg-white">
