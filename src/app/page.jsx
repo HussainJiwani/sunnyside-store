@@ -37,7 +37,7 @@ function MainComponent() {
 
       {/* Hero Section */}
       <section id="home" className="relative h-[600px] flex items-center justify-center">
-        <img src="/country-store-hero.jpg" alt="Sunnyside Country Store" className="absolute inset-0 w-full h-full object-cover brightness-50" />
+        <img src="/gasstation.png" alt="Sunnyside Country Store" className="absolute inset-0 w-full h-full object-cover brightness-50" />
         <div className="text-center text-white z-10">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">Welcome to Sunnyside</h1>
           <p className="text-xl md:text-2xl mb-8">Your Community Hub for Essentials & More</p>
