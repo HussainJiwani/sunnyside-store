@@ -71,7 +71,7 @@ function MainComponent() {
           </div>
         )}
       </nav>
-      
+
        {/* Hero Section */}
        <section id="home" className="relative h-[600px] flex items-center justify-center">
         <img src="/gasstation.png" alt="Sunnyside Country Store" className="absolute inset-0 w-full h-full object-cover brightness-50" />
@@ -101,6 +101,30 @@ function MainComponent() {
             <div className="bg-amber-50 p-8 rounded-xl shadow-md">
               <h3 className="text-2xl font-semibold mb-2">Premium</h3>
               <p className="text-4xl text-amber-700">${fuelPrices.premium}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Store Section */}
+      <section id="store" className="py-16 bg-yellow-50">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-8">Our Store Highlights</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <img src="/fresh-produce.jpg" alt="Fresh Produce" className="w-full h-48 object-cover rounded-md mb-4" />
+              <h3 className="text-2xl font-semibold mb-2">Fresh Produce</h3>
+              <p className="text-gray-600">Locally sourced fruits and vegetables.</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <img src="/bakery-items.jpg" alt="Bakery Items" className="w-full h-48 object-cover rounded-md mb-4" />
+              <h3 className="text-2xl font-semibold mb-2">Bakery Delights</h3>
+              <p className="text-gray-600">Freshly baked goods daily.</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <img src="/grocery-items.jpg" alt="Grocery Items" className="w-full h-48 object-cover rounded-md mb-4" />
+              <h3 className="text-2xl font-semibold mb-2">Grocery Essentials</h3>
+              <p className="text-gray-600">All your daily needs in one place.</p>
             </div>
           </div>
         </div>
