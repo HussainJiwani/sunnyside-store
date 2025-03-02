@@ -150,9 +150,23 @@ function MainComponent() {
       <section id="contact" className="py-16 bg-yellow-100">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold mb-8">Contact Us</h2>
-          <p className="text-lg text-gray-700 mb-4">Have any questions? Reach out to us!</p>
-          <p className="text-lg text-gray-700">Email: info@sunnysidecountrystore.com</p>
-          <p className="text-lg text-gray-700">Phone: (123) 456-7890</p>
+          <p className="text-lg text-gray-700 mb-4">📍 3108 Crest Hwy ste b, Thomaston, GA 30286, United States</p>
+          <p className="text-lg text-gray-700 mb-4">📞 Phone: +1-706-938-0334</p>
+          
+          <div className="mb-6">
+            <iframe
+              className="w-full h-64 rounded-lg shadow-lg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.472525494577!2d-84.3471344!3d32.8909376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f45f13cb5d09f7%3A0x4bfcf95c7a3fbc8b!2s3108%20Crest%20Hwy%20ste%20b%2C%20Thomaston%2C%20GA%2030286%2C%20USA!5e0!3m2!1sen!2sus!4v1715634790000!5m2!1sen!2sus"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          
+          <div className="flex justify-center space-x-6">
+            <a href="https://www.facebook.com/profile.php?id=61572997659114" target="_blank" className="text-blue-700 text-lg font-semibold hover:underline">Facebook</a>
+            <a href="https://www.instagram.com/sunnysidecountrystore/" target="_blank" className="text-pink-600 text-lg font-semibold hover:underline">Instagram</a>
+          </div>
         </div>
       </section>
 
