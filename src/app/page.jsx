@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import { db } from "@/firebaseConfig";
 import { doc, getDoc, collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+
 
 function MainComponent() {
   const [showMenu, setShowMenu] = useState(false);
