@@ -146,6 +146,16 @@ function MainComponent() {
         </div>
       </section>
 
+      {/* Contact Section */}
+      <section id="contact" className="py-16 bg-yellow-100">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-8">Contact Us</h2>
+          <p className="text-lg text-gray-700 mb-4">Have any questions? Reach out to us!</p>
+          <p className="text-lg text-gray-700">Email: info@sunnysidecountrystore.com</p>
+          <p className="text-lg text-gray-700">Phone: (123) 456-7890</p>
+        </div>
+      </section>
+
       <footer className="bg-amber-700 text-white py-8 text-center">
         <p>© 2025 Sunnyside Country Store. All rights reserved.</p>
       </footer>
