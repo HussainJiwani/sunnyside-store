@@ -164,8 +164,12 @@ function MainComponent() {
           </div>
           
           <div className="flex justify-center space-x-6">
-            <a href="https://www.facebook.com/profile.php?id=61572997659114" target="_blank" className="text-blue-700 text-lg font-semibold hover:underline">Facebook</a>
-            <a href="https://www.instagram.com/sunnysidecountrystore/" target="_blank" className="text-pink-600 text-lg font-semibold hover:underline">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61572997659114" target="_blank" className="text-blue-700 text-lg font-semibold hover:underline">
+              <FaFacebook size={32} />
+            </a>
+            <a href="https://www.instagram.com/sunnysidecountrystore/" target="_blank" className="text-pink-600 text-lg font-semibold hover:underline">
+              <FaInstagram size={32} />
+            </a>
           </div>
         </div>
       </section>
