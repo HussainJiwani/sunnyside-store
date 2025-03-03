@@ -3,7 +3,10 @@
 import { useState, useEffect } from 'react';
 import { db } from "@/firebaseConfig";
 import { doc, getDoc, collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import dynamic from "next/dynamic";
+
+const FaFacebook = dynamic(() => import("react-icons/fa").then((mod) => mod.FaFacebook), { ssr: false });
+const FaInstagram = dynamic(() => import("react-icons/fa").then((mod) => mod.FaInstagram), { ssr: false });
 
 
 function MainComponent() {
