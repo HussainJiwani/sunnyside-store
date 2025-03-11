@@ -52,7 +52,7 @@ function MainComponent() {
         <h3 className="text-3xl md:text-3xl font-semibold mb-2">
           Introducing
         </h3>
-        <h1 className="text-8xl md:text-6xl font-extrabold mb-4 font-montserrat">
+        <h1 className="text-8xl md:text-5xl font-extrabold mb-4 font-montserrat">
           Sunnyside Country Store
         </h1>
         <p className="text-lg md:text-3xl max-w-3xl leading-snug">
