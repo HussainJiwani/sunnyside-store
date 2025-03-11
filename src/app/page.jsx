@@ -31,56 +31,38 @@ function MainComponent() {
 
       {/* Store Hours Section */}
       <section id="hours" className="py-16 bg-white text-center shadow-md rounded-lg mx-4 my-8">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-[#8B4513] mb-6">🕒 Store Hours</h2>
-          <p className="text-2xl text-gray-700">Monday - Sunday: <span className="font-semibold">6:00 AM - 10:00 PM</span></p>
+        <div className="container mx-auto max-w-lg">
+          <h2 className="text-4xl font-bold text-[#8B4513] mb-6 uppercase tracking-widest">Store Hours</h2>
+          <ul className="text-lg text-gray-700 space-y-2">
+            <li>📅 Mon-Thu: 7:00 AM - 10:00 PM</li>
+            <li>📅 Fri-Sat: 7:00 AM - MIDNIGHT</li>
+            <li>📅 Sun: 11:00 AM - 9:00 PM</li>
+          </ul>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-16 bg-[#FFF3CD] text-center shadow-md rounded-lg mx-4 my-8">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-[#8B4513] mb-6">🚜 Our Services</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-lg">
-            <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
-              <span className="text-5xl">☕</span>
-              <p className="mt-3">Fresh Coffee</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
-              <span className="text-5xl">🥪</span>
-              <p className="mt-3">Snacks & Deli</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
-              <span className="text-5xl">⛽</span>
-              <p className="mt-3">Fuel Station</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
-              <span className="text-5xl">🥤</span>
-              <p className="mt-3">Cold Drinks</p>
-            </div>
-          </div>
+      {/* Sign Up Section */}
+      <section id="signup" className="py-16 bg-[#FFF3CD] text-center shadow-md rounded-lg mx-4 my-8">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-4xl font-bold text-[#8B4513] mb-6 uppercase tracking-widest">Sign Up</h2>
+          <p className="text-lg text-gray-600 mb-6">Submit any product requests you have here or contact us directly:</p>
+          <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="text" placeholder="First Name" className="w-full p-3 border rounded-lg bg-gray-100" />
+            <input type="text" placeholder="Last Name" className="w-full p-3 border rounded-lg bg-gray-100" />
+            <input type="email" placeholder="E-mail" className="w-full p-3 border rounded-lg bg-gray-100" />
+            <input type="text" placeholder="Phone" className="w-full p-3 border rounded-lg bg-gray-100" />
+            <textarea placeholder="Message" className="w-full p-3 border rounded-lg bg-gray-100 md:col-span-2 h-32"></textarea>
+            <button type="submit" className="bg-[#8B4513] hover:bg-[#654321] text-white px-6 py-3 rounded-full text-lg md:col-span-2">Send Message</button>
+          </form>
         </div>
       </section>
 
       {/* Contact Section */}
       <section id="contact" className="py-16 bg-[#FFEB99] text-center shadow-md rounded-lg mx-4 my-8">
-        <div className="container mx-auto">
+        <div className="container mx-auto max-w-lg">
           <h2 className="text-4xl font-bold text-[#8B4513] mb-6">📍 Contact Us</h2>
-          <p className="text-2xl">📍 3108 Crest Hwy ste b, Thomaston, GA 30286, United States</p>
-          <p className="text-2xl">📞 +1-706-938-0334</p>
-          <div className="mt-6">
-            <iframe
-              className="w-full h-64 rounded-lg shadow-lg"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.472525494577!2d-84.3471344!3d32.8909376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f45f13cb5d09f7%3A0x4bfcf95c7a3fbc8b!2s3108%20Crest%20Hwy%20ste%20b%2C%20Thomaston%2C%20GA%2030286%2C%20USA!5e0!3m2!1sen!2sus!4v1715634790000!5m2!1sen!2sus"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-          <div className="flex justify-center space-x-6 mt-6">
-            <a href="https://www.facebook.com/profile.php?id=61572997659114" target="_blank" className="text-blue-700 text-lg font-semibold hover:underline">Facebook</a>
-            <a href="https://www.instagram.com/sunnysidecountrystore/" target="_blank" className="text-pink-600 text-lg font-semibold hover:underline">Instagram</a>
-          </div>
+          <p className="text-lg">📍 3108 Crest Hwy ste b, Thomaston, GA 30286, United States</p>
+          <p className="text-lg">📞 +1-706-938-0334</p>
         </div>
       </section>
 
