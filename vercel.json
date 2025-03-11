@@ -1,0 +1,11 @@
+{
+    "redirects": [
+      {
+        "source": "/",
+        "destination": "/admin/dashboard",
+        "has": [{ "type": "host", "value": "admin.sunnysidecountrystore.com" }],
+        "permanent": true
+      }
+    ]
+  }
+  
