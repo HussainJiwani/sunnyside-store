@@ -65,7 +65,7 @@ function MainComponent() {
         <h1 className="text-8xl font-extrabold mb-4">
           Sunnyside Country Store
         </h1>
-        <p className="text-6xl max-w-4xl leading-snug">
+        <p className="text-3xl max-w-4xl leading-snug">
           Your Go-To Neighborhood Stop for Essentials, Treats, and More!
         </p>
       </section>
