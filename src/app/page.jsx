@@ -45,20 +45,21 @@ function MainComponent() {
       
 
       {/* Hero Section */}
-      <section id="home" className="relative flex flex-col items-center justify-center bg-[#8B4513] text-white text-center px-4 py-16 md:h-[700px]">
-        <h2 className="text-5xl md:text-5xl font-bold mb-2 tracking-wide">
+      <section id="home" className="relative flex flex-col items-center justify-center bg-[#8B4513] text-white text-center px-4 py-20 md:h-[700px]">
+        <h2 className="text-3xl md:text-5xl font-bold mb-2 tracking-wide">
           Coming Soon!!
         </h2>
-        <h3 className="text-3xl md:text-3xl font-semibold mb-2">
+        <h3 className="text-xl md:text-3xl font-semibold mb-2">
           Introducing
         </h3>
-        <h1 className="text-5xl md:text-5xl font-extrabold mb-2 font-montserrat">
+        <h1 className="text-4xl md:text-7xl font-extrabold mb-4 font-montserrat">
           Sunnyside Country Store
         </h1>
-        <p className="text-lg md:text-3xl max-w-3xl leading-snug">
+        <p className="text-md md:text-2xl max-w-3xl leading-snug">
           Your Go-To Neighborhood Stop for Essentials, Treats, and More!
         </p>
       </section>
+
 
       {/* Services Section */}
       <section id="services" className="py-16 bg-[#FFF3CD] text-center shadow-md rounded-lg mx-4 my-8">
