@@ -55,11 +55,19 @@ function MainComponent() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="relative h-[600px] flex items-center justify-center bg-[url('/wooden-texture.jpg')] bg-cover bg-center">
-        <div className="text-center text-white z-10 bg-black bg-opacity-50 px-8 py-6 rounded-lg shadow-lg">
-          <h2 className="text-6xl font-bold mb-4">🌻 Opening Soon! 🌾</h2>
-          <p className="text-2xl">Your Neighborhood Stop for Essentials & More</p>
-        </div>
+      <section id="home" className="relative h-[700px] flex flex-col items-center justify-center bg-[#8B4513] text-white text-center px-8">
+        <h2 className="text-8xl font-bold mb-4 tracking-wide">
+          Coming Soon!!
+        </h2>
+        <h3 className="text-6xl font-semibold mb-2">
+          Introducing
+        </h3>
+        <h1 className="text-8xl font-extrabold mb-4">
+          Sunnyside Country Store
+        </h1>
+        <p className="text-6xl max-w-4xl leading-snug">
+          Your Go-To Neighborhood Stop for Essentials, Treats, and More!
+        </p>
       </section>
 
       {/* Services Section */}
