@@ -5,7 +5,7 @@ const nextConfig = {
       {
         source: "/",
         destination: "/admin/dashboard",
-        has: [{ type: "host", value: "admin.yourdomain.com" }],
+        has: [{ type: "host", value: "admin.sunnysidecountrystore.com" }],
       },
     ];
   },
