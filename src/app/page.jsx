@@ -63,16 +63,22 @@ function MainComponent() {
       {/* Store Hours & Contact */}
       <section id="contact" className="py-16 bg-[#FFEB99] shadow-md rounded-lg mx-4 my-8">
         <div className="container mx-auto flex flex-col md:flex-row justify-between">
-          <div className="md:w-1/2 text-left px-6">
-            <h2 className="text-4xl font-bold text-[#8B4513] mt-8 mb-6">ADDRESS</h2>
-            <p className="text-lg">📍 3108 Crest Hwy ste b, Thomaston, GA 30286, United States</p>
-            <h2 className="text-4xl font-bold text-[#8B4513] mt-8 mb-6">PHONE</h2>
-            <p className="text-lg">📞 +1-706-938-0334</p>
-            <h2 className="text-4xl font-bold text-[#8B4513] mb-6">STORE HOURS</h2>
-            <p className="text-lg">📅 Mon-Thu: 6:00 AM - 10:00 PM</p>
-            <p className="text-lg">📅 Fri-Sat: 7:00 AM - 11:00 PM</p>
-            <p className="text-lg">📅 Sun: 7:00 AM - 10:00 PM</p>
-            <div className="mt-6">
+          <div className="md:w-1/2 text-left px-6 space-y-6">
+            <div>
+              <h2 className="text-4xl font-bold text-[#8B4513]">ADDRESS</h2>
+              <p className="text-lg">📍 3108 Crest Hwy ste b, Thomaston, GA 30286, United States</p>
+            </div>
+            <div>
+              <h2 className="text-4xl font-bold text-[#8B4513]">PHONE</h2>
+              <p className="text-lg">📞 +1-706-938-0334</p>
+            </div>
+            <div>
+              <h2 className="text-4xl font-bold text-[#8B4513]">STORE HOURS</h2>
+              <p className="text-lg">📅 Mon-Thu: 6:00 AM - 10:00 PM</p>
+              <p className="text-lg">📅 Fri-Sat: 7:00 AM - 11:00 PM</p>
+              <p className="text-lg">📅 Sun: 7:00 AM - 10:00 PM</p>
+            </div>
+            <div>
               <h2 className="text-2xl font-bold text-[#8B4513]">Follow Us</h2>
               <div className="flex space-x-4 mt-2">
                 <a href="https://www.facebook.com/profile.php?id=61572997659114" target="_blank" className="text-blue-700 text-3xl">
