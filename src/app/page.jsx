@@ -46,13 +46,13 @@ function MainComponent() {
 
       {/* Hero Section */}
       <section id="home" className="relative flex flex-col items-center justify-center bg-[#8B4513] text-white text-center px-4 py-16 md:h-[700px]">
-        <h2 className="text-5xl md:text-8xl font-bold mb-2 tracking-wide">
+        <h2 className="text-5xl md:text-5xl font-bold mb-2 tracking-wide">
           Coming Soon!!
         </h2>
         <h3 className="text-3xl md:text-3xl font-semibold mb-2">
           Introducing
         </h3>
-        <h1 className="text-8xl md:text-5xl font-extrabold mb-4 font-montserrat">
+        <h1 className="text-5xl md:text-5xl font-extrabold mb-2 font-montserrat">
           Sunnyside Country Store
         </h1>
         <p className="text-lg md:text-3xl max-w-3xl leading-snug">
