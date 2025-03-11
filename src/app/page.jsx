@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import { db } from "@/firebaseConfig";
 import { doc, getDoc, collection, addDoc, serverTimestamp } from "firebase/firestore";
 import dynamic from "next/dynamic";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+
 
 
 
@@ -14,9 +16,7 @@ function MainComponent() {
   const [contact, setContact] = useState("");
   const [orderDetails, setOrderDetails] = useState("");
   const [message, setMessage] = useState("");
-  const FaFacebook = dynamic(() => import("react-icons/fa").then((mod) => mod.FaFacebook), { ssr: false });
-  const FaInstagram = dynamic(() => import("react-icons/fa").then((mod) => mod.FaInstagram), { ssr: false });
-
+ 
   useEffect(() => {
     const fetchFuelPrices = async () => {
       const docRef = doc(db, "fuel_prices", "current");
