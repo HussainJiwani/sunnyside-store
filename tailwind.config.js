@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Product Sans", "sans-serif"],
+        sans: ["Montserrat", "sans-serif"], // Set Montserrat as default
       },
     },
   },

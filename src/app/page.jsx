@@ -40,32 +40,22 @@ function MainComponent() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 to-yellow-200 font-['Josefin Sans']">
-      {/* Header */}
-      <header className="bg-[#8B4513] text-white py-5 shadow-lg sticky top-0 z-50">
-        <div className="container mx-auto flex justify-between items-center px-6">
-          <h1 className="text-3xl font-bold tracking-wide">🌅 Sunnyside Country Store</h1>
-          <nav>
-            <ul className="flex space-x-6 text-lg">
-              <li><a href="#home" className="hover:text-yellow-300 transition">Home</a></li>
-              <li><a href="#services" className="hover:text-yellow-300 transition">Services</a></li>
-              <li><a href="#contact" className="hover:text-yellow-300 transition">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      
+      
+      
 
       {/* Hero Section */}
-      <section id="home" className="relative h-[700px] flex flex-col items-center justify-center bg-[#8B4513] text-white text-center px-8">
-        <h2 className="text-8xl font-bold mb-4 tracking-wide">
+      <section id="home" className="relative flex flex-col items-center justify-center bg-[#8B4513] text-white text-center px-4 py-16 md:h-[700px]">
+        <h2 className="text-5xl md:text-8xl font-bold mb-2 tracking-wide">
           Coming Soon!!
         </h2>
-        <h3 className="text-6xl font-semibold mb-2">
+        <h3 className="text-3xl md:text-3xl font-semibold mb-2">
           Introducing
         </h3>
-        <h1 className="text-8xl font-extrabold mb-4">
+        <h1 className="text-8xl md:text-6xl font-extrabold mb-4 font-montserrat">
           Sunnyside Country Store
         </h1>
-        <p className="text-3xl max-w-4xl leading-snug">
+        <p className="text-lg md:text-3xl max-w-3xl leading-snug">
           Your Go-To Neighborhood Stop for Essentials, Treats, and More!
         </p>
       </section>
@@ -116,45 +106,71 @@ function MainComponent() {
 
       {/* Store Hours & Contact */}
       <section id="contact" className="py-16 bg-[#FFEB99] shadow-md rounded-lg mx-4 my-8">
-        <div className="container mx-auto flex flex-col md:flex-row justify-between">
-          <div className="md:w-1/2 text-left px-6 space-y-6">
-            <h2 className="text-2xl font-bold text-[#8B4513]">ADDRESS</h2>
-            <p className="text-lg">📍 3108 Crest Hwy ste b, Thomaston, GA 30286, United States</p>
-
-            <h2 className="text-2xl font-bold text-[#8B4513]">PHONE</h2>
-            <p className="text-lg">📞 +1-706-938-0334</p>
-
-            <h2 className="text-2xl font-bold text-[#8B4513]">STORE HOURS</h2>
-            <p className="text-lg">📅 Mon-Thu: 6:00 AM - 10:00 PM</p>
-            <p className="text-lg">📅 Fri-Sat: 7:00 AM - 11:00 PM</p>
-            <p className="text-lg">📅 Sun: 7:00 AM - 10:00 PM</p>
-
-            <h2 className="text-2xl font-bold text-[#8B4513]">Follow Us</h2>
-            <div className="flex space-x-4 mt-2">
-              <a href="https://www.facebook.com/profile.php?id=61572997659114" target="_blank" className="text-blue-700 text-3xl">
-                <FaFacebook />
-              </a>
-              <a href="https://www.instagram.com/sunnysidecountrystore/" target="_blank" className="text-pink-600 text-3xl">
-                <FaInstagram />
-              </a>
+        <div className="container mx-auto flex flex-col md:flex-row justify-between gap-12 px-6">
+          
+          {/* Left Column - Contact Details */}
+          <div className="md:w-1/2 space-y-8">
+            
+            {/* Address */}
+            <div>
+              <h2 className="text-3xl font-bold text-[#8B4513] mb-2">📍 ADDRESS</h2>
+              <p className="text-lg">3108 Crest Hwy Ste B, Thomaston, GA 30286, United States</p>
             </div>
-          </div>
 
-          {/* Sign-Up Form */}
-          <div className="md:w-1/2 text-right px-6">
-            <h2 className="text-2xl font-bold text-[#8B4513] mb-6 uppercase tracking-widest">Sign Up</h2>
-            {successMessage && <p className="text-green-600">{successMessage}</p>}
-            <form onSubmit={handleSignUp} className="grid grid-cols-1 gap-4">
-              <input type="text" placeholder="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} required className="w-full p-3 border rounded-lg bg-gray-100" />
-              <input type="text" placeholder="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)} required className="w-full p-3 border rounded-lg bg-gray-100" />
-              <input type="email" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} required className="w-full p-3 border rounded-lg bg-gray-100" />
-              <input type="text" placeholder="Phone" value={phone} onChange={(e) => setPhone(e.target.value)} required className="w-full p-3 border rounded-lg bg-gray-100" />
-              <textarea placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)} className="w-full p-3 border rounded-lg bg-gray-100 h-32"></textarea>
+            {/* Phone */}
+            <div>
+              <h2 className="text-3xl font-bold text-[#8B4513] mb-2">📞 PHONE</h2>
+              <p className="text-lg">+1-706-938-0334</p>
+            </div>
+
+            {/* Email */}
+            <div>
+              <h2 className="text-3xl font-bold text-[#8B4513] mb-2">📧 EMAIL</h2>
+              <p className="text-lg">
+                <a href="mailto:info@sunnysidecountrystore.com" className="text-[#8B4513] hover:underline">
+                  info@sunnysidecountrystore.com
+                </a>
+              </p>
+            </div>
+
+            {/* Store Hours */}
+            <div>
+              <h2 className="text-3xl font-bold text-[#8B4513] mb-2">⏰ STORE HOURS</h2>
+              <p className="text-lg">Mon-Thu: <span className="font-semibold">6:00 AM - 10:00 PM</span></p>
+              <p className="text-lg">Fri-Sat: <span className="font-semibold">7:00 AM - 11:00 PM</span></p>
+              <p className="text-lg">Sun: <span className="font-semibold">7:00 AM - 10:00 PM</span></p>
+            </div>
+
+            {/* Follow Us */}
+            <div>
+              <h2 className="text-3xl font-bold text-[#8B4513] mb-2">🔗 FOLLOW US</h2>
+              <div className="flex space-x-6 mt-2">
+                <a href="https://www.facebook.com/profile.php?id=61572997659114" target="_blank" className="text-blue-700 text-4xl hover:text-blue-900 transition">
+                  <FaFacebook />
+                </a>
+                <a href="https://www.instagram.com/sunnysidecountrystore/" target="_blank" className="text-pink-600 text-4xl hover:text-pink-800 transition">
+                  <FaInstagram />
+                </a>
+              </div>
+            </div>
+
+          </div>
+          
+          {/* Right Column - Sign Up Form */}
+          <div className="md:w-1/2 bg-white p-8 rounded-lg shadow-md">
+            <h2 className="text-3xl font-bold text-[#8B4513] mb-6 uppercase tracking-widest">Sign Up</h2>
+            <form className="grid grid-cols-1 gap-4">
+              <input type="text" placeholder="First Name" className="w-full p-3 border rounded-lg bg-gray-100" />
+              <input type="text" placeholder="Last Name" className="w-full p-3 border rounded-lg bg-gray-100" />
+              <input type="email" placeholder="E-mail" className="w-full p-3 border rounded-lg bg-gray-100" />
+              <input type="text" placeholder="Phone" className="w-full p-3 border rounded-lg bg-gray-100" />
+              <textarea placeholder="Message" className="w-full p-3 border rounded-lg bg-gray-100 h-32"></textarea>
               <button type="submit" className="bg-[#8B4513] hover:bg-[#654321] text-white px-6 py-3 rounded-full text-lg">Sign Up</button>
             </form>
           </div>
+
         </div>
-      </section>
+    </section>  
     </div>
   );
 }
