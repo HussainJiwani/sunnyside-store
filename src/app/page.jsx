@@ -3,10 +3,9 @@
 import React from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
-
 function MainComponent() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-50 to-yellow-200 font-sans">
+    <div className="min-h-screen bg-gradient-to-b from-amber-50 to-yellow-200 font-[Montserrat]">
       {/* Header */}
       <header className="bg-[#8B4513] text-white py-5 shadow-lg sticky top-0 z-50">
         <div className="container mx-auto flex justify-between items-center px-6">
@@ -24,39 +23,10 @@ function MainComponent() {
 
       {/* Hero Section */}
       <section id="home" className="relative h-[600px] flex items-center justify-center">
-        <img src="/gasstation.jpg" alt="Sunnyside Country Store" className="absolute inset-0 w-full h-full object-cover brightness-75" />
+        <img src="/countryside-store.jpg" alt="Sunnyside Country Store" className="absolute inset-0 w-full h-full object-cover brightness-75" />
         <div className="text-center text-white z-10 bg-black bg-opacity-50 px-8 py-6 rounded-lg shadow-lg">
           <h2 className="text-6xl font-bold mb-4">🌻 Opening Soon! 🌾</h2>
           <p className="text-2xl">Your Neighborhood Stop for Essentials & More</p>
-        </div>
-      </section>
-
-      {/* Our Services Section */}
-      <section id="services" className="py-16 bg-[#FFF3CD] text-center shadow-md rounded-lg mx-4 my-8">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-[#8B4513] mb-6 uppercase tracking-widest">Our Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <img src="/pizza.jpg" alt="Pizza" className="w-full h-48 object-cover rounded-md mb-4" />
-              <h3 className="text-2xl font-bold">Pizza</h3>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <img src="/food.jpg" alt="Food" className="w-full h-48 object-cover rounded-md mb-4" />
-              <h3 className="text-2xl font-bold">Food</h3>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <img src="/deli.jpg" alt="Deli" className="w-full h-48 object-cover rounded-md mb-4" />
-              <h3 className="text-2xl font-bold">Deli</h3>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <img src="/fuel.jpg" alt="Fuel" className="w-full h-48 object-cover rounded-md mb-4" />
-              <h3 className="text-2xl font-bold">Fuel</h3>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <img src="/drinks.jpg" alt="Drinks" className="w-full h-48 object-cover rounded-md mb-4" />
-              <h3 className="text-2xl font-bold">Drinks</h3>
-            </div>
-          </div>
         </div>
       </section>
 
