@@ -15,6 +15,7 @@ function MainComponent() {
   const [successMessage, setSuccessMessage] = useState("");
 
   // Handle Form Submission
+  // Handle Form Submission
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
@@ -27,16 +28,26 @@ function MainComponent() {
         timestamp: serverTimestamp(),
       });
 
-      setSuccessMessage("Sign-up successful!");
+      setSuccessMessage("✅ Sign-up successful!");
+      
+      // Clear form after successful submission
       setFirstName("");
       setLastName("");
       setEmail("");
       setPhone("");
       setMessage("");
+
+      // Hide success message after 5 seconds
+      setTimeout(() => setSuccessMessage(""), 5000);
     } catch (error) {
-      console.error("Error signing up:", error);
+      console.error("❌ Error signing up:", error);
+      setSuccessMessage("❌ Failed to sign up. Please try again.");
     }
   };
+
+  console.log("🔹 Function Loaded ✅"); // ✅ Log if function exists
+  
+
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 to-yellow-200 font-['Josefin Sans']">
@@ -172,14 +183,16 @@ function MainComponent() {
           {/* Right Column - Sign Up Form */}
           <div className="md:w-1/2 bg-white p-8 rounded-lg shadow-md">
             <h2 className="text-3xl font-bold text-[#8B4513] mb-6 uppercase tracking-widest">Sign Up</h2>
-            <form className="grid grid-cols-1 gap-4">
-              <input type="text" placeholder="First Name" className="w-full p-3 border rounded-lg bg-gray-100" />
-              <input type="text" placeholder="Last Name" className="w-full p-3 border rounded-lg bg-gray-100" />
-              <input type="email" placeholder="E-mail" className="w-full p-3 border rounded-lg bg-gray-100" />
-              <input type="text" placeholder="Phone" className="w-full p-3 border rounded-lg bg-gray-100" />
-              <textarea placeholder="Message" className="w-full p-3 border rounded-lg bg-gray-100 h-32"></textarea>
+            {successMessage && <p className="text-green-600 font-semibold">{successMessage}</p>}
+            <form onSubmit={handleSignUp} className="grid grid-cols-1 gap-4">
+              <input type="text" placeholder="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} required className="w-full p-3 border rounded-lg bg-gray-100" />
+              <input type="text" placeholder="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)} required className="w-full p-3 border rounded-lg bg-gray-100" />
+              <input type="email" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} required className="w-full p-3 border rounded-lg bg-gray-100" />
+              <input type="text" placeholder="Phone" value={phone} onChange={(e) => setPhone(e.target.value)} required className="w-full p-3 border rounded-lg bg-gray-100" />
+              <textarea placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)} className="w-full p-3 border rounded-lg bg-gray-100 h-32"></textarea>
               <button type="submit" className="bg-[#8B4513] hover:bg-[#654321] text-white px-6 py-3 rounded-full text-lg">Sign Up</button>
             </form>
+
           </div>
 
         </div>
