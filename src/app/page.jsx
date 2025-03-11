@@ -1,11 +1,10 @@
 "use client";
 
 import React from "react";
-import "@fontsource/product-sans";
 
 function MainComponent() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-50 to-yellow-200 font-[Product Sans]">
+    <div className="min-h-screen bg-gradient-to-b from-amber-50 to-yellow-200 font-sans">
       {/* Header */}
       <header className="bg-[#8B4513] text-white py-5 shadow-lg sticky top-0 z-50">
         <div className="container mx-auto flex justify-between items-center px-6">
