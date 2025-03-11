@@ -66,17 +66,17 @@ function MainComponent() {
 
         {/* Text Content */}
         <div className="relative z-10 flex flex-col items-center justify-center text-center">
-          <h2 className="text-5xl md:text-8xl font-bold mb-2 tracking-wide">
-            Coming Soon!!
+          <h2 className="text-3xl md:text-3xl font-bold mb-2 tracking-wide">
+            The Wait is Almost Over!
           </h2>
-          <h3 className="text-3xl md:text-4xl font-semibold mb-2">
-            Introducing
-          </h3>
           <h1 className="text-6xl md:text-8xl font-extrabold mb-4">
             Sunnyside Country Store
           </h1>
+          <h3 className="text-4xl md:text-5xl font-semibold mb-2">
+            Where Community Meets Convenience!
+          </h3>
           <p className="text-lg md:text-3xl max-w-3xl leading-snug text-center">
-            Your Go-To Neighborhood Stop for Essentials, Treats, and More!
+            Stay tuned for our grand opening and get ready to experience the best!
           </p>
         </div>
       </section>
