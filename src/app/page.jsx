@@ -76,7 +76,7 @@ function MainComponent() {
             Where Community Meets Convenience!
           </h3>
           <p className="text-lg md:text-3xl max-w-3xl leading-snug text-center">
-          Serving Coffee,  Deli, Drinks, Pizza, Beer, & More
+          Serving Coffee,  Deli, Drinks, Pizza, Beer, Wine & More
           </p>
         </div>
          {/* Blinking Call to Action */}
