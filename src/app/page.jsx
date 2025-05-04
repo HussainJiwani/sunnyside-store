@@ -75,8 +75,8 @@ function MainComponent() {
           <h3 className="text-4xl md:text-5xl font-semibold mb-2">
             Where Community Meets Convenience!
           </h3>
-          <p className="text-lg md:text-3xl max-w-3xl leading-snug text-center">
-          Serving Coffee,  Deli, Drinks, Pizza, Beer, Wine & More
+          <p className="text-lg md:text-3xl max-w-3xl leading-snug text-center whitespace-nowrap">
+            Serving Coffee, Deli, Drinks, Pizza, Beer, Wine & More
           </p>
         </div>
          {/* Blinking Call to Action */}
