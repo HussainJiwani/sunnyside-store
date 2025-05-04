@@ -80,7 +80,7 @@ function MainComponent() {
           </p>
         </div>
          {/* Blinking Call to Action */}
-        <a href="tel:+17069380334" className="bg-white text-[#8B4513] px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition animate-pulse mt-6">
+        <a href="tel:+17069380334" className="bg-white text-[#8B4513] px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition animate-pulse mt-8">
          📞 Order Now: (706) 938-0334
        </a>
       </section>
