@@ -67,7 +67,7 @@ function MainComponent() {
         {/* Text Content */}
         <div className="relative z-10 flex flex-col items-center justify-center text-center">
           <h2 className="text-3xl md:text-3xl font-bold mb-2 tracking-wide">
-            The Wait is Almost Over!
+            We're Open
           </h2>
           <h1 className="text-6xl md:text-8xl font-extrabold mb-4">
             Sunnyside Country Store
@@ -76,9 +76,13 @@ function MainComponent() {
             Where Community Meets Convenience!
           </h3>
           <p className="text-lg md:text-3xl max-w-3xl leading-snug text-center">
-            Stay tuned for our grand opening and get ready to experience the best!
+          Serving Coffee,  Deli, Drinks, Pizza, Beer, & More
           </p>
         </div>
+         {/* Blinking Call to Action */}
+        <a href="tel:+17069380334" className="bg-white text-[#8B4513] px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition animate-pulse mt-6">
+         📞 Order Now: (706) 938-0334
+       </a>
       </section>
 
 
@@ -110,7 +114,7 @@ function MainComponent() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6 justify-center">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <img src="/fuel.jpg" alt="Fuel" className="w-full h-48 object-cover rounded-md mb-4" />
-              <h3 className="text-2xl font-bold">Fuel</h3>
+              <h3 className="text-2xl font-bold">Fuel- Will Open Soon</h3>
               <p className="text-lg text-gray-600">Quality fuel at great prices.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
