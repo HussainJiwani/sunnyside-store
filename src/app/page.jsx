@@ -75,8 +75,8 @@ function MainComponent() {
           <h3 className="text-4xl md:text-5xl font-semibold mb-2">
             Where Community Meets Convenience!
           </h3>
-          <p className="text-lg md:text-3xl max-w-3xl leading-snug text-center whitespace-nowrap">
-            Serving Coffee, Deli, Drinks, Pizza, Beer, Wine & More
+          <p className="text-lg md:text-3xl max-w-3xl leading-snug text-center mx-auto">
+          Fuel, Food & Flavor — Coffee, Wings, Pizza, Gas, Beer, Wine & More!
           </p>
         </div>
          {/* Blinking Call to Action */}
@@ -85,11 +85,23 @@ function MainComponent() {
        </a>
       </section>
 
+    {/* Wings Section */}
+      <section id="wings" className="bg-[#FFF3CD] py-16 text-center px-4">
+        <h2 className="text-4xl font-bold text-[#8B4513] mb-6 uppercase tracking-widest">Our Wings</h2>
+        <p className="text-lg text-gray-700 mb-6 max-w-3xl mx-auto">
+          Hot, crispy, and bursting with flavor. Try our delicious wings in your favorite sauces!
+        </p>
 
+        <div className="max-w-4xl mx-auto rounded-lg overflow-hidden shadow-lg">
+          <video controls autoPlay muted loop className="w-full h-auto rounded-md">
+            <source src="/wings.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
 
-
-      {/* Services Section */}
-      <section id="services" className="py-16 bg-[#FFF3CD] text-center shadow-md rounded-lg mx-4 my-8">
+       {/* Services Section */}
+       <section id="services" className="py-16 bg-[#FFF3CD] text-center shadow-md rounded-lg mx-4 my-8">
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-[#8B4513] mb-6 uppercase tracking-widest">Our Services</h2>
 
@@ -114,7 +126,7 @@ function MainComponent() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6 justify-center">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <img src="/fuel.jpg" alt="Fuel" className="w-full h-48 object-cover rounded-md mb-4" />
-              <h3 className="text-2xl font-bold">Fuel- Will Open Soon</h3>
+              <h3 className="text-2xl font-bold">Fuel - Marathon</h3>
               <p className="text-lg text-gray-600">Quality fuel at great prices.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
@@ -130,7 +142,6 @@ function MainComponent() {
           </div>
         </div>
       </section>
-
 
       {/* Store Hours & Contact */}
       <section id="contact" className="py-16 bg-[#FFEB99] shadow-md rounded-lg mx-4 my-8">
