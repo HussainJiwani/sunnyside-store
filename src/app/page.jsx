@@ -4,6 +4,9 @@ import React, { useState } from "react";
 import { db } from "@/firebaseConfig";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { useEffect } from "react";
+import { doc, getDoc } from "firebase/firestore";
+
 
 function MainComponent() {
   // State for Sign-Up Form
@@ -13,6 +16,29 @@ function MainComponent() {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+  const [fuelPrices, setFuelPrices] = useState({
+    regular: "",
+    premium: "",
+    diesel: "",
+    offroad: ""
+  });
+  
+  useEffect(() => {
+    const fetchFuelPrices = async () => {
+      try {
+        const docRef = doc(db, "fuel_prices", "current");
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          setFuelPrices(docSnap.data());
+        }
+      } catch (error) {
+        console.error("Error fetching fuel prices:", error);
+      }
+    };
+
+    fetchFuelPrices();
+  }, []);
+
 
   // Handle Form Submission
   // Handle Form Submission
@@ -83,6 +109,16 @@ function MainComponent() {
         <a href="tel:+17069380334" className="bg-white text-[#8B4513] px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition animate-pulse mt-8">
          📞 Order Now: (706) 938-0334
        </a>
+
+       <div className="absolute top-4 left-4 bg-white bg-opacity-90 text-[#8B4513] rounded-lg shadow-md p-4 text-sm md:text-base z-10 animate-pulse">
+          <h4 className="font-bold text-center mb-1">⛽ Fuel Prices</h4>
+          <p>Regular: ${fuelPrices.regular}</p>
+          <p>Premium: ${fuelPrices.premium}</p>
+          <p>Diesel: ${fuelPrices.diesel}</p>
+          <p>Off Road: ${fuelPrices.offroad}</p>
+        </div>
+
+
       </section>
 
     {/* Wings Section */}
@@ -106,38 +142,67 @@ function MainComponent() {
           <h2 className="text-4xl font-bold text-[#8B4513] mb-6 uppercase tracking-widest">Our Services</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Deli */}
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <img src="/pizza.jpg" alt="Pizza" className="w-full h-48 object-cover rounded-md mb-4" />
-              <h3 className="text-2xl font-bold">Pizza</h3>
-              <p className="text-lg text-gray-600">Delicious, fresh, and made to order.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <img src="/food.jpg" alt="Food" className="w-full h-48 object-cover rounded-md mb-4" />
-              <h3 className="text-2xl font-bold">Food</h3>
-              <p className="text-lg text-gray-600">Hot meals, fresh ingredients, great taste.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <img src="/deli.jpg" alt="Deli" className="w-full h-48 object-cover rounded-md mb-4" />
+              <img src="/services/deli.jpg" alt="Deli" className="w-full h-48 object-cover rounded-md mb-4" />
               <h3 className="text-2xl font-bold">Deli</h3>
-              <p className="text-lg text-gray-600">Premium meats and cheeses sliced fresh.</p>
+              <p className="text-lg text-gray-600">Fresh and flavorful deli options prepared daily </p>
             </div>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6 justify-center">
+            {/* Wings */}
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <img src="/fuel.jpg" alt="Fuel" className="w-full h-48 object-cover rounded-md mb-4" />
-              <h3 className="text-2xl font-bold">Fuel - Marathon</h3>
-              <p className="text-lg text-gray-600">Quality fuel at great prices.</p>
+              <img src="/services/wings.jpg" alt="Wings" className="w-full h-48 object-cover rounded-md mb-4" />
+              <h3 className="text-2xl font-bold">Wings</h3>
+              <p className="text-lg text-gray-600">Crispy, juicy, and full of flavor.</p>
             </div>
+
+            {/* Pizza */}
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <img src="/drinks.jpg" alt="Drinks" className="w-full h-48 object-cover rounded-md mb-4" />
-              <h3 className="text-2xl font-bold">Drinks</h3>
-              <p className="text-lg text-gray-600">Refreshing beverages for all tastes.</p>
+              <img src="/services/pizza.jpeg" alt="Pizza" className="w-full h-48 object-cover rounded-md mb-4" />
+              <h3 className="text-2xl font-bold">Pizza</h3>
+              <p className="text-lg text-gray-600">Made fresh, every time.</p>
             </div>
+
+            {/* Local Meat */}
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <img src="/doordash.jpg" alt="Doordash" className="w-full h-48 object-cover rounded-md mb-4" />
+              <img src="/services/meat.jpg" alt="Local Meat" className="w-full h-48 object-cover rounded-md mb-4" />
+              <h3 className="text-2xl font-bold">Local Meat</h3>
+              <p className="text-lg text-gray-600">High-quality local cuts.</p>
+            </div>
+
+            {/* Gas */}
+            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <img src="/services/gas.jpg" alt="Gas" className="w-full h-48 object-cover rounded-md mb-4" />
+              <h3 className="text-2xl font-bold">Gas</h3>
+              <p className="text-lg text-gray-600">Marathon Fuel — Reliable & Affordable.</p>
+            </div>
+
+            {/* Baits */}
+            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <img src="/services/baits.jpg" alt="Baits" className="w-full h-48 object-cover rounded-md mb-4" />
+              <h3 className="text-2xl font-bold">Baits</h3>
+              <p className="text-lg text-gray-600">Get ready to reel ‘em in!</p>
+            </div>
+
+            {/* Beer & Drinks */}
+            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <img src="/services/beer.jpeg" alt="Beer & Drinks" className="w-full h-48 object-cover rounded-md mb-4" />
+              <h3 className="text-2xl font-bold">Beer & Drinks</h3>
+              <p className="text-lg text-gray-600">Cold, refreshing, and ready to go.</p>
+            </div>
+
+            {/* Grocery */}
+            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <img src="/services/grocery.jpg" alt="Grocery" className="w-full h-48 object-cover rounded-md mb-4" />
+              <h3 className="text-2xl font-bold">Grocery</h3>
+              <p className="text-lg text-gray-600">Everyday essentials, all in one place.</p>
+            </div>
+
+            {/* Doordash */}
+            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <img src="/services/doordash.png" alt="Doordash" className="w-full h-48 object-cover rounded-md mb-4" />
               <h3 className="text-2xl font-bold">Doordash</h3>
-              <p className="text-lg text-gray-600">Order online and get it delivered fast.</p>
+              <p className="text-lg text-gray-600">Get it delivered to your door.</p>
             </div>
           </div>
         </div>

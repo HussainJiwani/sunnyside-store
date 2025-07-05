@@ -9,7 +9,12 @@ import Papa from "papaparse";
 
 function AdminDashboard() {
   const [signups, setSignups] = useState([]);
-  const [fuelPrices, setFuelPrices] = useState({ regular: "", plus: "", premium: "" });
+  const [fuelPrices, setFuelPrices] = useState({
+    regular: "",
+    premium: "",
+    offroad: "",
+    diesel: "",
+  });
   const [orders, setOrders] = useState([]);
   const router = useRouter();
 
@@ -104,7 +109,7 @@ function AdminDashboard() {
       {/* Fuel Price Update Section */}
       <div className="bg-white p-6 rounded-lg shadow-md mb-6">
         <h2 className="text-2xl font-semibold mb-4">Update Fuel Prices</h2>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           <input
             type="text"
             placeholder="Regular Price"
@@ -114,19 +119,27 @@ function AdminDashboard() {
           />
           <input
             type="text"
-            placeholder="Plus Price"
-            className="p-3 border rounded"
-            value={fuelPrices.plus}
-            onChange={(e) => setFuelPrices({ ...fuelPrices, plus: e.target.value })}
-          />
-          <input
-            type="text"
             placeholder="Premium Price"
             className="p-3 border rounded"
             value={fuelPrices.premium}
             onChange={(e) => setFuelPrices({ ...fuelPrices, premium: e.target.value })}
           />
+          <input
+            type="text"
+            placeholder="Offroad Price"
+            className="p-3 border rounded"
+            value={fuelPrices.offroad}
+            onChange={(e) => setFuelPrices({ ...fuelPrices, offroad: e.target.value })}
+          />
+          <input
+            type="text"
+            placeholder="Diesel Price"
+            className="p-3 border rounded"
+            value={fuelPrices.diesel}
+            onChange={(e) => setFuelPrices({ ...fuelPrices, diesel: e.target.value })}
+          />
         </div>
+
         <button onClick={updateFuelPrices} className="bg-blue-600 text-white px-4 py-2 rounded mt-4 hover:bg-blue-700">
           Update Prices
         </button>
